@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		60C595D397686970345E073D /* Pods_ReproduceCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB69F01C58E794155C7E582B /* Pods_ReproduceCrash.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		7BF2CF4CD07B5C426DF752B3 /* Pods-ReproduceCrash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReproduceCrash.release.xcconfig"; path = "Target Support Files/Pods-ReproduceCrash/Pods-ReproduceCrash.release.xcconfig"; sourceTree = "<group>"; };
+		AB69F01C58E794155C7E582B /* Pods_ReproduceCrash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReproduceCrash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D52B79401377B89294D2DE49 /* Pods-ReproduceCrash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReproduceCrash.debug.xcconfig"; path = "Target Support Files/Pods-ReproduceCrash/Pods-ReproduceCrash.debug.xcconfig"; sourceTree = "<group>"; };
 		E393BB8B2DACE51F00ECB716 /* ReproduceCrash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReproduceCrash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -23,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C595D397686970345E073D /* Pods_ReproduceCrash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31CE0CF6C65CCC1A54B83B1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D52B79401377B89294D2DE49 /* Pods-ReproduceCrash.debug.xcconfig */,
+				7BF2CF4CD07B5C426DF752B3 /* Pods-ReproduceCrash.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE084189ECA92B60E3D519C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB69F01C58E794155C7E582B /* Pods_ReproduceCrash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E393BB822DACE51F00ECB716 = {
 			isa = PBXGroup;
 			children = (
 				E393BB8D2DACE51F00ECB716 /* ReproduceCrash */,
 				E393BB8C2DACE51F00ECB716 /* Products */,
+				31CE0CF6C65CCC1A54B83B1C /* Pods */,
+				BE084189ECA92B60E3D519C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +79,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E393BB962DACE52000ECB716 /* Build configuration list for PBXNativeTarget "ReproduceCrash" */;
 			buildPhases = (
+				3796657A59D3532B88C9273B /* [CP] Check Pods Manifest.lock */,
 				E393BB872DACE51F00ECB716 /* Sources */,
 				E393BB882DACE51F00ECB716 /* Frameworks */,
 				E393BB892DACE51F00ECB716 /* Resources */,
+				1D6F596B03BF47B655CC9BEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -64,8 +93,6 @@
 				E393BB8D2DACE51F00ECB716 /* ReproduceCrash */,
 			);
 			name = ReproduceCrash;
-			packageProductDependencies = (
-			);
 			productName = ReproduceCrash;
 			productReference = E393BB8B2DACE51F00ECB716 /* ReproduceCrash.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +140,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D6F596B03BF47B655CC9BEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReproduceCrash/Pods-ReproduceCrash-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReproduceCrash/Pods-ReproduceCrash-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReproduceCrash/Pods-ReproduceCrash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3796657A59D3532B88C9273B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReproduceCrash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E393BB872DACE51F00ECB716 /* Sources */ = {
@@ -248,6 +321,7 @@
 		};
 		E393BB972DACE52000ECB716 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D52B79401377B89294D2DE49 /* Pods-ReproduceCrash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -255,12 +329,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AJTWL9YMTL;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,6 +352,7 @@
 		};
 		E393BB982DACE52000ECB716 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF2CF4CD07B5C426DF752B3 /* Pods-ReproduceCrash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -283,12 +360,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AJTWL9YMTL;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
